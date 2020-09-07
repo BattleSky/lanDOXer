@@ -29,9 +29,9 @@ namespace LanDOXer
                 MessageBox.Show("LanDOXer уже запущен", "LanDOXer");
                 return;
             }
-
-            System.AppDomain.CurrentDomain.UnhandledException += UnhandledExceptionTrapper;
-            MakeAutoLaunch();
+            //TODO: Включить
+            //System.AppDomain.CurrentDomain.UnhandledException += UnhandledExceptionTrapper;
+            //MakeAutoLaunch();
             var lanDox = new DirectoryCheck();
             var fileWithByteData = new ReadWriteBytesData();
             var notifications = new SomeNotifications();
@@ -53,10 +53,10 @@ namespace LanDOXer
             }
         }
         // TODO: Впоследствии отключить, чтобы не отлавливать любые ошибки
-        static void UnhandledExceptionTrapper(object sender, UnhandledExceptionEventArgs e)
-        {
-            MessageBox.Show(e.ExceptionObject.ToString(), "LanDOXer");
-           // Environment.Exit(1);
-        }
+        //static void UnhandledExceptionTrapper(object sender, UnhandledExceptionEventArgs e)
+        //{
+        //    MessageBox.Show(e.ExceptionObject.ToString(), "LanDOXer");
+        //   // Environment.Exit(1);
+        //}
     }
 }
