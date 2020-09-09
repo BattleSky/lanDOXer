@@ -29,7 +29,6 @@ namespace LanDOXer
                 MessageBox.Show("LanDOXer уже запущен", "LanDOXer");
                 return;
             }
-
             System.AppDomain.CurrentDomain.UnhandledException += UnhandledExceptionTrapper;
             MakeAutoLaunch();
             var lanDox = new DirectoryCheck();

@@ -7,7 +7,7 @@ namespace LanDOXer
 {
     public class ReadWriteBytesData
     {
-        private static FileInfo TargetFile => new FileInfo(Path.Combine(Environment.CurrentDirectory, "data.dat"));
+        private static FileInfo TargetFile => new FileInfo(Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "data.dat"));
 
         public void CreateFileIfNotExists()
         {
